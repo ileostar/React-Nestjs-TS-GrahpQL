@@ -48,8 +48,6 @@ jobs:
 
       - name: Build app/pc
         run: pnpm --filter pc build:pc
-      - name: Vue-Router History Mode
-        run: cp app/pc/dist/cli/index.html app/pc/dist/404.html
       - name: Deploy app/pc
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
