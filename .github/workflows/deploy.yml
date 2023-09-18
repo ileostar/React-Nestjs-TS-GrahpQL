@@ -46,18 +46,18 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
-      - name: Build app/mobile
-        run: pnpm --filter mobile build:mobile
+      - name: Build app/pc
+        run: pnpm --filter pc build:pc
       - name: Vue-Router History Mode
-        run: cp app/mobile/dist/cli/index.html app/mobile/dist/404.html
-      - name: Deploy mobile
+        run: cp app/pc/dist/cli/index.html app/pc/dist/404.html
+      - name: Deploy app/pc
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: depazer/playground
-          branch: master
-          folder: packages/web/dist/cli
-          commit-message: 'build: deploy playground'
+          repository-name: 030liuxinghao/React-TS-PC
+          branch: main
+          folder: app/pc/dist
+          commit-message: 'build: deploy app/pc to React-TS-PC'
 
   deploy:
     environment:
