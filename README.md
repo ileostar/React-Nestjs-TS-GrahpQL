@@ -1,6 +1,6 @@
-# `Turborepo` Vite starter
+# React+Nestjs+TS+GraphQL
 
-This is an official starter Turborepo.
+This is a learning project.
 
 ## Using this example
 
