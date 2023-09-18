@@ -54,7 +54,7 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           repository-name: 030liuxinghao/React-TS-PC
           branch: main
-          folder: /home/runner/work/React-Nestjs-TS-GrahpQL/apps/pc/dist
+          folder: apps/pc/dist
           commit-message: 'build: deploy apps/pc to React-TS-PC'
 
   deploy:
