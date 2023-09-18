@@ -58,7 +58,7 @@ jobs:
           commit-message: 'build: deploy apps/pc to React-TS-PC'
 
       - name: Build apps/mobile
-        run: pnpm --filter=pc build
+        run: pnpm --filter=mobile build
       - name: Deploy apps/mobile
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
