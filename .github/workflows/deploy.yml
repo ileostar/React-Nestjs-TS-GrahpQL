@@ -57,14 +57,14 @@ jobs:
           folder: apps/pc/dist
           commit-message: 'build: deploy apps/pc to React-TS-PC'
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+      - name: Build apps/mobile
+        run: pnpm --filter=pc build
+      - name: Deploy apps/mobile
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          repository-name: 030liuxinghao/React-TS-Mobile
+          branch: main
+          folder: apps/mobile/dist
+          commit-message: 'build: deploy apps/pc to React-TS-Mobile'
+
