@@ -47,7 +47,7 @@ jobs:
           path: docs/.vitepress/dist
 
       - name: Build apps/pc
-        run: pnpm --filter pc build:pc
+        run: pnpm --filter=pc build
       - name: Deploy apps/pc
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
