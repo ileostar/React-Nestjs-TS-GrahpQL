@@ -54,7 +54,7 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           repository-name: 030liuxinghao/React-TS-PC
           branch: main
-          folder: apps/pc/dist
+          folder: ${{ github.workspace }}/apps/pc/dist
           commit-message: 'build: deploy app/pc to React-TS-PC'
 
   deploy:
