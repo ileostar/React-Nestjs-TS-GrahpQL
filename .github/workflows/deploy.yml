@@ -56,6 +56,7 @@ jobs:
           branch: main
           folder: apps/pc/dist
           commit-message: 'build: deploy apps/pc to React-TS-PC'
+          clean: true
 
       - name: Build apps/mobile
         run: pnpm --filter=mobile build
@@ -67,4 +68,5 @@ jobs:
           branch: main
           folder: apps/mobile/dist
           commit-message: 'build: deploy apps/pc to React-TS-Mobile'
+          clean: true
 
