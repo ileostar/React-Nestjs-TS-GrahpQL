@@ -46,16 +46,16 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
-      - name: Build app/pc
+      - name: Build apps/pc
         run: pnpm --filter pc build:pc
-      - name: Deploy app/pc
+      - name: Deploy apps/pc
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           repository-name: 030liuxinghao/React-TS-PC
           branch: main
-          folder: ${{ github.workspace }}/apps/pc/dist
-          commit-message: 'build: deploy app/pc to React-TS-PC'
+          folder: /home/runner/work/React-Nestjs-TS-GrahpQL/apps/pc/dist
+          commit-message: 'build: deploy apps/pc to React-TS-PC'
 
   deploy:
     environment:
