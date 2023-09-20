@@ -1,6 +1,10 @@
 {
   "private": true,
   "scripts": {
+    "start": "pnpm --filter nest start",
+    "start:dev": "pnpm --filter nest start:dev",
+    "start:debug": "pnpm --filter nest start:debug",
+    "start:prod": "pnpm --filter nest start:prod",
     "build": "turbo build --no-daemon",
     "dev": "turbo dev --no-daemon",
     "lint": "turbo lint --no-daemon",
